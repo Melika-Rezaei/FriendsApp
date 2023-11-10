@@ -1,0 +1,36 @@
+﻿@model Friend
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container">
+    <h3 class="text-center py-4"> Add a New Friend </h3>
+
+    <!--test 2 -->
+    <div class="row d-flex justify-content-center">
+        <div class="text-center py-3 border border-info-subtle rounded-3 col-md-6">
+
+            <form method="post" asp-controller="Friends" asp-action="NewPage">
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">Name: </label>
+                    <input asp-for="Name" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Number" class="form-label">Number: </label>
+                    <input asp-for="Number" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Image" class="form-label">Image Url: </label>
+                    <input asp-for="Image" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-secondary">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>

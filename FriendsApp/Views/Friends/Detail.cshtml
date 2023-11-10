@@ -1,0 +1,22 @@
+﻿@model Friend 
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container">
+    <h3 class="text-center py-4">Friend Number @Model.Number </h3>
+
+    <!--test 2 -->
+    <div class="row d-flex justify-content-center">
+        <div class="text-center py-3 border border-info-subtle rounded-3 col-md-6">
+            <img class="rounded-circle" src="../@Model.Image" alt="Friend image" />
+            <h2 class="fw-bold text-dark mt-2">@Model.Name</h2>
+            <p class="text-secondary">The Number of my friend is: <span class="text-primary">@Model.Number</span></p>
+            <p> <a class="btn btn-secondary" asp-controller="Friends" asp-action="List">View another friends »</a> </p>
+            
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,39 @@
+﻿@model List<Friend>
+@* @model Friend11 *@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container text-center">
+    <h1> My Friends List</h1>
+    <p>This List show the Top 10 of My friends: </p>
+
+    <table class="table">
+        <thead class="table-primary">
+            <tr class="text-center">
+                <th class="">Number</th>
+                <th class="">MyFriendsName</th>
+                <th class="">Image</th>
+            </tr>
+        </thead>
+        <tbody >
+             @foreach(var item in Model)
+             {
+                <tr class="align-items-center">
+                    <td class="">@item.Number</td>
+                    <td class="">@item.Name</td>
+                    <td class="img-fluid"><img src="@item.Image" alt="Friend image" /></td>
+                </tr>
+             }
+        </tbody>
+    </table>
+
+    <div class="row d-flex justify-content-center">
+        <div class="text-center py-3 border border-info bg-light rounded-3 col-md-6">
+            <p class="text-dark">Can't Find your best friend's name? </p>
+            <p> <a class="btn btn-info" asp-controller="Friends" asp-action="NewPage"> Click Here » </a> </p>
+        </div>
+    </div>
+</div>
+
